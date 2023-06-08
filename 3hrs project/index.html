@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        my list
+    </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>My Data</h1>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Choose ExpenseAmount</label><label class="validation-error hide" id="fullNameValidationError"></label>
+                        <input type="text" name="fullName" id="expenseamount">
+                    </div>
+                    <div>
+                        <label>Choode description</label>
+                        <input type="text" name="empCode" id="description">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlSelect1">Choose a Category</label>
+                      <select class="form-control" id="category">
+                        <option>movie</option>
+                        <option>diesel</option>
+                        <option>on vacation</option>
+                        <option>tofee</option>
+                      </select>
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="List">
+                    <thead>
+                        <tr>
+                            <th>Expense Amount</th>
+                            <th>Description</th>
+                            <th>Category</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
