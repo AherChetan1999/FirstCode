@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        my list
+    </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>My Shop</h1>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Selling Price</label><label class="validation-error hide" id="fullNameValidationError"></label>
+                        <input type="text" name="fullName" id="price">
+                    </div>
+                    <div>
+                        <label>Product Name</label>
+                        <input type="text" name="id" id="p_name">
+                    </div>                
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            
+        </tr>
+    </table>
+    <td>
+        <h1>Products</h1>
+        <table class="list" id="List">
+            <thead>
+                <tr>
+                    <th>Selling Price</th>
+                    <th>Product Name</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </td>
+
+<h2>Total value worth of Products </h2>
+<p id="demo"></p>
+
+
+
+    <script src="scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+</body>
+
+</html>
