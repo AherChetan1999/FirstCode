@@ -16,6 +16,7 @@ function readFormData() {
     formData["name"] = document.getElementById("name").value;
     formData["email"] = document.getElementById("email").value;
     formData["number"] = document.getElementById("number").value;
+    
     obj={
         name:formData["name"],
         email:formData["email"],
@@ -26,17 +27,32 @@ function readFormData() {
 }
 
 function insertNewRecord(data) {
-    var table = document.getElementById("List").getElementsByTagName('tbody')[0];
-    var newRow = table.insertRow(table.length);
-    cell1 = newRow.insertCell(0);
-    cell1.innerHTML = data.name;
-    cell2 = newRow.insertCell(1);
-    cell2.innerHTML = data.email;
-    cell3 = newRow.insertCell(2);
-    cell3.innerHTML = data.number;
-    cell4 = newRow.insertCell(3);
-    cell4.innerHTML = `<a onClick="onEdit(this)">Edit</a>
-                       <a onClick="onDelete(this)">Delete</a>`;
+
+  
+    axios.get("https://crudcrud.com/api/f43779b67e63469c89e7c4ae62c729a1/appointdata")
+    .then(response => {
+        
+         for(var i=0; i<response.data.length;i++)
+         {   
+            
+            var table = document.getElementById("List").getElementsByTagName('tbody')[0];
+            var newRow = table.insertRow(table.length);
+            cell1 = newRow.insertCell(0);
+            cell1.innerHTML = response.data[i].name;
+            cell2 = newRow.insertCell(1);
+            cell2.innerHTML = response.data[i].email;
+            cell3 = newRow.insertCell(2);
+            cell3.innerHTML = response.data[i].number;
+            cell4 = newRow.insertCell(3);
+            cell4.innerHTML = `<a onClick="onEdit(this)">Edit</a>
+                               <a onClick="onDelete(this)">Delete</a>`;
+
+         }
+
+    })
+
+   
+
 }
 
 function resetForm() {
@@ -53,6 +69,7 @@ function onEdit(td) {
     document.getElementById("number").value = selectedRow.cells[2].innerHTML;
 }
 function updateRecord(formData) {
+    
     selectedRow.cells[0].innerHTML = formData.name;
     selectedRow.cells[1].innerHTML = formData.email;
     selectedRow.cells[2].innerHTML = formData.number;
