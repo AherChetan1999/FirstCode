@@ -81,6 +81,7 @@ function onDelete(td) {
         row = td.parentElement.parentElement;
         document.getElementById("List").deleteRow(row.rowIndex);
         resetForm();
+
     }
 }
 function validate() {
