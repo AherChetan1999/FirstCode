@@ -1,0 +1,34 @@
+[
+    {
+        "_id": "64aafac2795226af9689cb07",
+        "first_name": "chetan",
+        "last_name": "Aher",
+        "roll_no": "101",
+        "mobile_no": "02594",
+        "__v": 0
+    },
+    {
+        "_id": "64aafad2795226af9689cb09",
+        "first_name": "cham",
+        "last_name": "Aher",
+        "roll_no": "102",
+        "mobile_no": "02594-98456",
+        "__v": 0
+    },
+    {
+        "_id": "64aafb67acfe69aad31f01ef",
+        "first_name": "ram",
+        "last_name": "deore",
+        "roll_no": "103",
+        "mobile_no": "02594-96478",
+        "__v": 0
+    },
+    {
+        "_id": "64aafe5d94fea3d69d5e0de8",
+        "first_name": "ram-sham",
+        "last_name": "deore",
+        "roll_no": "103",
+        "mobile_no": "02594-96478",
+        "__v": 0
+    }
+]
