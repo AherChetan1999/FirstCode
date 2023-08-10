@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        my list
+    </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>My Data</h1>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Candy name</label>
+                        <input type="text" name="fullName" id="name">
+                    </div>
+                    <div>
+                        <label>Description</label>
+                        <input type="text" name="id" id="description">
+                    </div>
+                    <div>
+                        <label>Price</label>
+                        <input type="text" name="num" id="price">
+                    </div>
+                    <div>
+                        <label>Quantity</label>
+                        <input type="text" name="num" id="quantity">
+                    </div>
+                    
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Add Item">
+                    </div>
+                </form>
+            </td>
+            
+        </tr>
+    </table>
+    <td>
+        <table class="list" id="List">
+            <thead>
+                <tr>
+                    <th>CandyName</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Add Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </td>
+    <script src="scripts.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+
+</html>
